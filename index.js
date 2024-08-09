@@ -16,7 +16,7 @@ const orderRoutes = require('./routes/order');
 
 const app = express();
 
-const port = 4006;
+const port = 4000;
 
 app.use(express.json());
 
