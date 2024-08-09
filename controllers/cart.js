@@ -113,7 +113,6 @@ module.exports.removeFromCart = async (req, res) => {
 	try {
 		let cart = await Cart.findOne({ userId });
 
-		console.log(cart);
 
 		if (!cart) {
 			return res.status(404).send('Cart not found');

@@ -16,7 +16,6 @@ module.exports.createAccessToken = (user) => {
 
 module.exports.authenticate = (req, res, next) => {
 
-	console.log(req.headers.authorization);
 
 	let token = req.headers.authorization;
 
@@ -26,11 +25,9 @@ module.exports.authenticate = (req, res, next) => {
 
 	} else {
 
-		console.log(token);
 
 		token = token.slice(7, token.length);
 
-		console.log(token);
 
 		jwt.verify(token, secret, function(err, decodedToken) {
 

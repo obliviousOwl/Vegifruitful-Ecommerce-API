@@ -119,7 +119,6 @@ module.exports.archiveProduct = (req, res) => {
 
 	return Product.findByIdAndUpdate(req.params.productId, updatedActiveStatus, {new: true}).then(archiveProduct => {
 		if(archiveProduct) {
-			console.log(archiveProduct.isActive)
 			return res.status(200).send({ 
 				message: 'Product archived successfully',
 				archiveProduct: archiveProduct
