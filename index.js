@@ -42,10 +42,10 @@ db.on('error', console.error.bind(console, 'connection error'));
 
 db.once('open', () => console.log(`We're now connected to MongoDb Atlas`));
 
-app.use('/b6/users', userRoutes);
-app.use('/b6/products', productRoutes);
-app.use('/b6/cart', cartRoutes);
-app.use('/b6/orders', orderRoutes);
+app.use('/users', userRoutes);
+app.use('/products', productRoutes);
+app.use('/cart', cartRoutes);
+app.use('/orders', orderRoutes);
 
 if(require.main === module) {
 	app.listen(process.env.PORT || port, () => console.log(`API is now online on port ${process.env.PORT || port}`))
